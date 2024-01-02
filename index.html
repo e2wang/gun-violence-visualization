@@ -1,0 +1,119 @@
+
+<html>  
+<head>  
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+
+</head>
+<body onload=finalProject()> 
+<div>
+<div class="title"> 
+    <h1>Mass Shooting Analysis: Exploring Patterns and Factors Across America</h1>
+</div>
+<br>
+<div>
+
+<div id="q1">
+    <h2 class="plotTitle">Number of Mass Shootings and Causalities in the United States, 2013-Present<sup>1</sup></h2>
+    <h3 class="subtitle">N = 4568 Shootings</h3>
+    </div>
+    <p>
+    <label id= "filteryear" for="filteryear">Filter by Year:</label>
+
+    <select name="yearsBtn" id="yearsBtn">
+    <option value="All Years">All Years</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+    <option value="2019">2019</option>
+    <option value="2018">2018</option>
+    <option value="2017">2017</option>
+    <option value="2016">2016</option>
+    <option value="2015">2015</option>
+    <option value="2014">2014</option>
+    <option value="2013">2013</option>
+    </select>
+
+</p>
+
+    <div id="plot_1" class="center_plot">
+    </div>
+    <p style="font-size: 20">Source: <a href="https://www.gunviolencearchive.org/reports">Gun Violence Archive</a></p>
+</div>    
+</div>
+    
+<div>
+
+<br><br>
+<h2 class="plotTitle">Mass Shooting Distribution and Gun Laws Among US States, 2013-Present<sup>1</sup></h2>
+    <h3 class="subtitle">N = 4568 Shootings</h3>
+    <div class="radio">
+        <input label="Total" type="radio" id="raw" name="gender" value="Incident ID" checked>
+        <input label="Per Capita" type="radio" id="capita" name="gender" value="Rates">
+    </div>
+
+<div id="q2">
+
+    <div id="plot_2" class="center_plot"></div>
+    <div id="mapInfo" class="scroll">
+        <h3>Select States By</h3>
+        <h4 id="Question">Gun Law Grade <sup>2</sup></h4>
+
+        <div class="selectState">
+            <div id="A" class="option">A</div>
+            <div id="B" class="option">B</div>
+            <div id="C"class="option">C</div>
+            <div id="D"class="option">D</div>
+            <div id="F"class="option">F</div>
+
+            <h4>Political Party <sup>3</sup></h4>
+
+            <div id="Democrat"class="option">Democrat</div>
+            <div id="Republican"class="option">Republican</div>
+            <div id="Swing State"class="option">Swing State</div>
+        </div>
+        
+    </div>
+
+</div>
+<p style="font-size: 20" id="Sources">Sources: <a href="https://www.gunviolencearchive.org/reports">Gun Violence Archive</a>, <a href="https://wisevoter.com/state-rankings/states-with-strictest-gun-laws/">Wisevoter</a>, <a href="https://worldpopulationreview.com/states">World Population Review</a></p>
+
+</div>  
+<br>
+<br>
+
+<div>
+
+<div id="q3">
+
+    <h2 class="plotTitle">Network of Mass Shooters: Background and Similarities, 2000-Present<sup>1</sup></h1>
+    <h3 class="subtitle">N = 117 Shooters</h2>
+
+        <label id= "filteryear" for="filteryear">Select Shooter Attribute<sup>2</sup>:</label>
+
+        <select name="attrBtn" id="attrBtn">
+        <option value="Location">Location</option>
+        <option value="Gender">Gender</option>
+        <option value="Race">Race</option>
+        <option value="Sexual Orientation">Sexual Orientation</option>
+        <option value="Religion">Religion</option>
+        <option value="Criminal Record">Criminal Record</option>
+        <option value="Mental Illness">Mental Illness</option>
+        <option value="Substance Use">Substance Use</option>
+        </select>
+    </div>
+    <div id="plot_3" class="center_plot">
+    </div>
+    <p class = "footnote" style="margin:10">[1] Last updated June 14, 2023.<br>[2] A link between two shooters indicates they share the same selected attribute.</p>
+    <p style="font-size: 20">Source: <a href="https://www.theviolenceproject.org/">The Violence Project</a></p>
+</div>
+
+<br><br>
+
+   
+</body>  
+</html>  
+
